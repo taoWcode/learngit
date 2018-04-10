@@ -415,6 +415,32 @@
 
         });
 
+
+        /*手机键盘弹起方案覆盖输入框解决方案*/
+        // $(".file-group input").on("focus",function(){
+        //     var _this = $(this),
+               
+        //     $('#fy-footer').hide();
+
+        // }).on("blur",function(){
+        //     $('#fy-footer').show();
+        // })
+
+        (function(){
+            var winHeight = $(window).height();//获取当前页面高度
+            $(window).resize(function(){
+                var thisHeight = $(this).height();
+                if(winHeight - thisHeight > 50){
+                    $('body').css('height',winHeight);
+                    $('#fy-footer').hide();
+                }else{
+                    $('body').css('height','100%');
+                    $('#fy-footer').show();
+                }
+            });
+        })()
+
+
     })
     </script>
 </body>
