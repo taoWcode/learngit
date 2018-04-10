@@ -408,6 +408,10 @@
             if (array_code.length > 0 && array_word.length > 0) {
 
                 setdata_dom.html(array_word.join('、')).siblings('input').attr("value", array_code.join(','));
+                setdata_dom.addClass('active');
+            }else{
+
+                setdata_dom.removeClass('active');
 
             }
 
@@ -423,11 +427,14 @@
             $(".file-group input").on("focus", function() {
                 var _this = $(this);
                 $('#fy-footer').hide();
+                _this.parents('.file-group').addClass('active');
                
 
 
             }).on("blur", function() {
+                 var _this = $(this);
                 $('#fy-footer').show();
+                _this.parents('.file-group').removeClass('active');
             });
 
             var winHeight = $(window).height();

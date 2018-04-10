@@ -44,6 +44,12 @@ body{
 			padding:pxTorem(9px);
 			margin-top: pxTorem(10px);
 			border-radius: pxTorem(3px);
+			&.active{
+				background: #cccddd;
+				input::-webkit-input-placeholder{
+					color:#333;
+				}
+			}
 			label{
 				-ms-flex-negative: 0;
 				    flex-shrink: 0;
@@ -83,14 +89,25 @@ body{
 				input{
 					line-height:pxTorem(24px);
 					background: none;
-					font-size:pxTorem(12px);
+					font-size:pxTorem(16px);
+					color:#333;
+					&::-webkit-input-placeholder{
+						font-size:pxTorem(12px);
+					}
 				}
 				.show{
 					line-height: pxTorem(24px);
 					font-size:pxTorem(12px);
 					text-align: left;
-					width:100%;
+					width:pxTorem(185px);
 					color:#999;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					&.active{
+						color:#333;
+						font-size:pxTorem(16px);
+					}
 				}
 				&.selection{
 						position:relative;
@@ -149,6 +166,7 @@ body{
 				height:pxTorem(80px);
 				-ms-flex-negative: 0;
 				    flex-shrink: 0;
+				border-radius: 3px;
 				overflow: hidden;
 				img{
 					display: block;
@@ -165,12 +183,10 @@ body{
 				.course-title{
 					font-size:pxTorem(14px);
 					color:#000;
-					line-height: pxTorem(16px);
-					height:pxTorem(32px);
+					line-height: pxTorem(40px);
+					height:pxTorem(40px);
 					overflow: hidden;
-					display: -webkit-box;
-					-webkit-box-orient:vertical;
-					-webkit-line-clamp:2;
+					white-space: nowrap;
 					text-overflow: ellipsis;
 				}
 				.date,.bottom{
@@ -182,7 +198,7 @@ body{
 					   -moz-box-align: end;
 					    -ms-flex-align: end;
 					        align-items: flex-end;
-					margin-top: pxTorem(10px);
+					
 					-webkit-box-pack: justify;
 					   -moz-box-pack: justify;
 					    -ms-flex-pack: justify;
@@ -193,6 +209,7 @@ body{
 					}
 				}
 				.bottom{
+					margin-top: pxTorem(10px);
 					.price{
 						color:#2C3E50;
 						font-size: pxTorem(16px);
@@ -261,7 +278,8 @@ body{
 				text-align: center;
 			}
 			.content{
-				line-height: 1.43;
+				line-height: 1.8;
+				letter-spacing: 1px;
 				color:#999;
 				font-size: pxTorem(12px);
 				margin-top:pxTorem(20px);
@@ -355,7 +373,7 @@ body{
 						&.active{
 							.img{
 								position: relative;
-								border:1px solid #ddd;
+								/*border:1px solid #ddd;*/
 								&:before{
 									content:"";
 									position: absolute;
@@ -419,11 +437,15 @@ body{
 				    flex-wrap: wrap;
 				max-height: pxTorem(300px);
 				overflow-y: auto;
+				-webkit-box-pack: justify;
+				   -moz-box-pack: justify;
+				    -ms-flex-pack: justify;
+				        justify-content: space-between;
 				.item{
-					font-size: pxTorem(14px);
+					font-size: pxTorem(16px);
 					color:#666;
-					line-height: pxTorem(30px);
-					padding:0 pxTorem(10px);
+					line-height: pxTorem(45px);
+					padding:0 pxTorem(20px);
 					margin: 0 pxTorem(10px) pxTorem(10px) 0;
 					border:1px solid #ddd;
 					&.active{
@@ -444,6 +466,18 @@ body{
 					}
 				}
 			}
+		}
+		.discipline-slide{
+			.list{
+				justify-content: flex-start;
+			.item{
+				line-height: pxTorem(30px);
+				padding:0 pxTorem(10px);
+				margin: 0 pxTorem(20px) pxTorem(15px) 0;
+				font-size: pxTorem(14px);
+			}
+			}
+			
 		}
 		.class-slide{
 			.list{

@@ -56,6 +56,13 @@ $de_font:23.475px;
 	padding:pxTorem(88px) 0 pxTorem(44px) 0;
 	overflow-y: auto;
 	background: #f7f7f7;
+	.list{
+		min-height:100%;
+		&:before{
+			content:"";
+			display:table;
+		}
+	}
 	.goods-item{
 		display: -webkit-box;
 		display: -moz-box;

@@ -36,6 +36,10 @@ body {
       padding: 0.3833865815rem;
       margin-top: 0.4259850905rem;
       border-radius: 0.1277955272rem; }
+      .form-body .form-part .file-group.active {
+        background: #cccddd; }
+        .form-body .form-part .file-group.active input::-webkit-input-placeholder {
+          color: #333; }
       .form-body .form-part .file-group label {
         -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -73,13 +77,22 @@ body {
         .form-body .form-part .file-group .input input {
           line-height: 1.0223642173rem;
           background: none;
-          font-size: 0.5111821086rem; }
+          font-size: 0.6815761448rem;
+          color: #333; }
+          .form-body .form-part .file-group .input input::-webkit-input-placeholder {
+            font-size: 0.5111821086rem; }
         .form-body .form-part .file-group .input .show {
           line-height: 1.0223642173rem;
           font-size: 0.5111821086rem;
           text-align: left;
-          width: 100%;
-          color: #999; }
+          width: 7.8807241747rem;
+          color: #999;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          .form-body .form-part .file-group .input .show.active {
+            color: #333;
+            font-size: 0.6815761448rem; }
         .form-body .form-part .file-group .input.selection {
           position: relative; }
           .form-body .form-part .file-group .input.selection:after {
@@ -126,6 +139,7 @@ body {
         height: 3.4078807242rem;
         -ms-flex-negative: 0;
         flex-shrink: 0;
+        border-radius: 3px;
         overflow: hidden; }
         .form-body .course-part .course-header .img img {
           display: block;
@@ -140,12 +154,10 @@ body {
         .form-body .course-part .course-header .msg .course-title {
           font-size: 0.5963791267rem;
           color: #000;
-          line-height: 0.6815761448rem;
-          height: 1.3631522897rem;
+          line-height: 1.7039403621rem;
+          height: 1.7039403621rem;
           overflow: hidden;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
+          white-space: nowrap;
           text-overflow: ellipsis; }
         .form-body .course-part .course-header .msg .date, .form-body .course-part .course-header .msg .bottom {
           display: -webkit-box;
@@ -156,7 +168,6 @@ body {
           -moz-box-align: end;
           -ms-flex-align: end;
           align-items: flex-end;
-          margin-top: 0.4259850905rem;
           -webkit-box-pack: justify;
           -moz-box-pack: justify;
           -ms-flex-pack: justify;
@@ -164,12 +175,14 @@ body {
           .form-body .course-part .course-header .msg .date span, .form-body .course-part .course-header .msg .bottom span {
             font-size: 0.5111821086rem;
             color: #999; }
-        .form-body .course-part .course-header .msg .bottom .price {
-          color: #2C3E50;
-          font-size: 0.6815761448rem; }
-          .form-body .course-part .course-header .msg .bottom .price i {
-            font-size: 0.5111821086rem;
-            padding-right: 0.1277955272rem; }
+        .form-body .course-part .course-header .msg .bottom {
+          margin-top: 0.4259850905rem; }
+          .form-body .course-part .course-header .msg .bottom .price {
+            color: #2C3E50;
+            font-size: 0.6815761448rem; }
+            .form-body .course-part .course-header .msg .bottom .price i {
+              font-size: 0.5111821086rem;
+              padding-right: 0.1277955272rem; }
     .form-body .course-part .select-group {
       display: -webkit-box;
       display: -moz-box;
@@ -216,7 +229,8 @@ body {
       color: #333;
       text-align: center; }
     .form-body .course-body .content {
-      line-height: 1.43;
+      line-height: 1.8;
+      letter-spacing: 1px;
       color: #999;
       font-size: 0.5111821086rem;
       margin-top: 0.851970181rem;
@@ -294,7 +308,7 @@ body {
           margin-right: 0; }
         .full-screen .slide .swiper-container .swiper-wrapper .swiper-slide .item.active .img {
           position: relative;
-          border: 1px solid #ddd; }
+          /*border:1px solid #ddd;*/ }
           .full-screen .slide .swiper-container .swiper-wrapper .swiper-slide .item.active .img:before {
             content: "";
             position: absolute;
@@ -342,12 +356,16 @@ body {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       max-height: 12.7795527157rem;
-      overflow-y: auto; }
+      overflow-y: auto;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
       .full-screen .slide .discipline-slide .list .item, .full-screen .slide .course-slide .list .item, .full-screen .slide .time-slide .list .item {
-        font-size: 0.5963791267rem;
+        font-size: 0.6815761448rem;
         color: #666;
-        line-height: 1.2779552716rem;
-        padding: 0 0.4259850905rem;
+        line-height: 1.9169329073rem;
+        padding: 0 0.851970181rem;
         margin: 0 0.4259850905rem 0.4259850905rem 0;
         border: 1px solid #ddd; }
         .full-screen .slide .discipline-slide .list .item.active, .full-screen .slide .course-slide .list .item.active, .full-screen .slide .time-slide .list .item.active {
@@ -363,6 +381,13 @@ body {
             right: -0.3407880724rem;
             background: url(../images/icon/choose.png) no-repeat center center;
             background-size: cover; }
+    .full-screen .slide .discipline-slide .list {
+      justify-content: flex-start; }
+      .full-screen .slide .discipline-slide .list .item {
+        line-height: 1.2779552716rem;
+        padding: 0 0.4259850905rem;
+        margin: 0 0.851970181rem 0.6389776358rem 0;
+        font-size: 0.5963791267rem; }
     .full-screen .slide .class-slide .list .item {
       padding: 0.2129925453rem 0.851970181rem 0.2129925453rem 0.2129925453rem;
       border: 1px solid #ddd;
