@@ -420,22 +420,23 @@
         (function() {
 
             var winHeight = $(window).height();
+            var preHeight = windHeight;
             $(".file-group input").on("focus", function() {
                 var _this = $(this);
                 $('#fy-footer').hide();
                 setTimeout(function(){
 
                     var thisHeight = $(window).height();
-                    var sub = winHeight - thisHeight;
-                    console.log(sub);
-                    if( sub > 50){
+                    var sub = preHeight - thisHeight;
+            
+                    if( Math.abs(sub) > 50){
                         var scrollTop = $("#main").scrollTop();
                         $('#main').scrollTop(scrollTop + sub);
+                        perHeight = thisHeight;
                     }
 
 
                 },300);
-                
 
 
             }).on("blur", function() {
