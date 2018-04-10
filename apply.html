@@ -431,7 +431,10 @@
             $(window).resize(function(){
                 var thisHeight = $(this).height();
                 if(winHeight - thisHeight > 50){
-                    $('body').css('height',winHeight);
+                    // $('body').css('height',winHeight);
+                    setTimeout(function(){
+                        document.body.scrollTop = document.body.scrollHeight;
+                    },50)
                     $('#fy-footer').hide();
                 }else{
                     $('body').css('height','100%');
