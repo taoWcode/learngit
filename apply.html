@@ -433,14 +433,15 @@
 
                     var thisHeight = $(this).height();
                     if(winHeight - thisHeight > 50){
-                        $('body').css('height',winHeight+'px');
+                        // $('body').css('height',winHeight+'px');
+                        $('body').scrollTop((winHeight - thisHeight)+"px");
 
                         $('#fy-footer').hide();
                     }else{
                         $('body').css('height','100%');
                         $('#fy-footer').show();
                     }
-                    
+
                 },100)
                 
             });
