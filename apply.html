@@ -417,17 +417,32 @@
 
 
         /*手机键盘弹起方案覆盖输入框解决方案*/
-        $(".file-group input").on("focus",function(){
-            var _this = $(this);
-            $('#fy-footer').hide();
-            var scrollTop = $("#main").scrollTop();
-            $('#main').scrollTop(scrollTop + 200);
-            
-            
+        (function() {
 
-        }).on("blur",function(){
-            $('#fy-footer').show();
-        })
+            var winHeight = $(window).height();
+            $(".file-group input").on("focus", function() {
+                var _this = $(this);
+                $('#fy-footer').hide();
+                setTimeout(function(){
+
+                    var thisHeight = $(window).height();
+                    var sub = winHeight - thisHeight;
+                    console.log(sub);
+                    if( sub > 50){
+                        var scrollTop = $("#main").scrollTop();
+                        $('#main').scrollTop(scrollTop + sub);
+                    }
+
+
+                },100);
+                
+
+
+            }).on("blur", function() {
+                $('#fy-footer').show();
+            })
+        })()
+
 
 
 
