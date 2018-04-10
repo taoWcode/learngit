@@ -314,8 +314,8 @@ body{
 		width:92%;
 		left:4%;
 		top:50%;
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
+		-webkit-transform: translate3d(0,-50%,0);
+		        transform: translate3d(0,-50%,0);
 		background: #fff;
 		border-top-right-radius: pxTorem(10px);
 		border-top-left-radius: pxTorem(10px);
@@ -543,21 +543,21 @@ body{
 /*animation*/
 @-webkit-keyframes show{
 	0%{
-		-webkit-transform:translateY(0) scale(.8);
-		        transform:translateY(0) scale(.8);
+		-webkit-transform:translate3d(0,0,0) scale(.8);
+		        transform:translate3d(0,0,0) scale(.8);
 	}
 	100%{
-		-webkit-transform:translateY(-50%) scale(1);
-		        transform:translateY(-50%) scale(1);
+		-webkit-transform:translate3d(0,-50%,0) scale(1);
+		        transform:translate3d(0,-50%,0) scale(1);
 	}
 }
 @keyframes show{
 	0%{
-		-webkit-transform:translateY(0) scale(.8);
-		        transform:translateY(0) scale(.8);
+		-webkit-transform:translate3d(0,0,0) scale(.8);
+		        transform:translate3d(0,0,0) scale(.8);
 	}
 	100%{
-		-webkit-transform:translateY(-50%) scale(1);
-		        transform:translateY(-50%) scale(1);
+		-webkit-transform:translate3d(0,-50%,0) scale(1);
+		        transform:translate3d(0,-50%,0) scale(1);
 	}
 }

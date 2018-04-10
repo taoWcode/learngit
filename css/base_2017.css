@@ -460,8 +460,10 @@ input::-webkit-input-placeholder{
     bottom:0;
     padding-top: 3.7547rem;
     background: #2C3E50;
-    -webkit-transition: right .5s linear;
-    transition: right .5s linear;
+    -webkit-transition: right .2s linear;
+    transition: right .2s linear;
+    -webkit-transform:translate3d(0,0,0);
+            transform:translate3d(0,0,0);
 }
 .menu-box.on .menu-list {
     right: 0;
