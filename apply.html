@@ -420,10 +420,8 @@
         $(".file-group input").on("focus",function(){
             var _this = $(this);
             $('#fy-footer').hide();
-            setTimeout(function(){
-                var winHeight = $(window).height();
-                alert(winHeight)
-            },100);
+            
+            $('.form-body').scrollTop(200);
             
             
 
