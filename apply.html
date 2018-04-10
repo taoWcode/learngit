@@ -434,17 +434,20 @@
             var preHeight = winHeight;
             $(window).resize(function(){
 
-                    var thisHeight = $(window).height();
-                    var sub = preHeight - thisHeight;
+                    setTimeout(function(){
+                         var thisHeight = $(window).height();
+                        var sub = preHeight - thisHeight;
+                    
                 
-            
-                    if( Math.abs(sub) > 50){
-                          preHeight = thisHeight;
-                         
-                        var scrollTop = $("#main").scrollTop();
-                        $('#main').scrollTop(scrollTop + sub);
-                       
-                    }
+                        if( Math.abs(sub) > 50){
+                              preHeight = thisHeight;
+                             
+                            var scrollTop = $("#main").scrollTop();
+                            $('#main').scrollTop(scrollTop + sub);
+                           
+                        }
+                    },100);
+                   
 
             });
         })()
