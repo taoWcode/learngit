@@ -420,8 +420,9 @@
         $(".file-group input").on("focus",function(){
             var _this = $(this);
             $('#fy-footer').hide();
-            
-            $('.form-body').scrollTop(200);
+            var scrollTop = $(".form-body").scrollTop();
+            // console.log(scrollTop)
+            $('.form-body').scrollTop('200px');
             
             
 
